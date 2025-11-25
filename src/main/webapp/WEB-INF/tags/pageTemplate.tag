@@ -13,6 +13,7 @@
 <main class="container-fluid mt-5">
 <jsp:doBody/>
 </main>
-</body>
 <jsp:include page="/WEB-INF/pages/footer.jsp" />
+<script src="${pageContext.request.contextPath}/scripts/form-validation.js"></script>
+</body>
 </html>

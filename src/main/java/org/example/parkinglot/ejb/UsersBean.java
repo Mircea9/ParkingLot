@@ -7,6 +7,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 import org.example.parkinglot.common.UserDto;
+import org.example.parkinglot.entities.Car;
 import org.example.parkinglot.entities.User;
 
 import java.util.ArrayList;
@@ -45,4 +46,5 @@ public class UsersBean {
             throw new EJBException(ex);
         }
     }
+
 }
