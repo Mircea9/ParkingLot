@@ -1,4 +1,4 @@
-package org.example.parkinglot.servlets;
+package org.example.parkinglot.servlets.cars;
 
 import jakarta.annotation.security.DeclareRoles;
 import jakarta.inject.Inject;
@@ -10,7 +10,6 @@ import org.example.parkinglot.ejb.CarsBean;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @DeclareRoles({"READ_CARS", "WRITE_CARS"})
@@ -27,8 +26,11 @@ public class Cars extends HttpServlet {
             ServletException, IOException {
         List<CarDto> cars = carsBean.findAllCars();
         request.setAttribute("cars", cars);
-        request.setAttribute("numberOfFreeParkingSpots",10);
-        request.getRequestDispatcher("/WEB-INF/pages/cars.jsp").forward(request, response);
+
+        int numberOfParkingSpots=100-cars.size();
+        request.setAttribute("numberOfFreeParkingSpots",numberOfParkingSpots);
+
+        request.getRequestDispatcher("/WEB-INF/pages/cars/cars.jsp").forward(request, response);
     }
 
     @Override

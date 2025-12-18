@@ -1,4 +1,4 @@
-package org.example.parkinglot.servlets;
+package org.example.parkinglot.servlets.users;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;

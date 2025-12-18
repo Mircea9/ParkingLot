@@ -7,9 +7,9 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 import org.example.parkinglot.common.CarDto;
 import org.example.parkinglot.common.CarPhotoDto;
-import org.example.parkinglot.entities.Car;
-import org.example.parkinglot.entities.CarPhoto;
-import org.example.parkinglot.entities.User;
+import org.example.parkinglot.entities.cars.Car;
+import org.example.parkinglot.entities.cars.CarPhoto;
+import org.example.parkinglot.entities.users.User;
 
 import java.util.ArrayList;
 import java.util.Collection;

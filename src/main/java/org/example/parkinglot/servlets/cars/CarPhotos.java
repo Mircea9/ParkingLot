@@ -1,4 +1,4 @@
-package org.example.parkinglot.servlets;
+package org.example.parkinglot.servlets.cars;
 
 import jakarta.inject.Inject;
 import jakarta.servlet.*;
@@ -6,7 +6,6 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import org.example.parkinglot.common.CarPhotoDto;
 import org.example.parkinglot.ejb.CarsBean;
-import org.example.parkinglot.entities.CarPhoto;
 
 import java.io.IOException;
 

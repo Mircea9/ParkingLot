@@ -1,7 +1,6 @@
 package org.example.parkinglot.common;
 
-import org.example.parkinglot.entities.Car;
-
+import org.example.parkinglot.entities.cars.Car;
 import java.util.List;
 
 public class UserDto {
@@ -10,13 +9,19 @@ public class UserDto {
     String password;
     String email;
     List<Car> cars;
+    List<String> groups;
 
-    public UserDto(Long id, String username, String email, String password, List<Car> cars) {
-        this.cars = cars;
-        this.email = email;
+    public UserDto(Long id, String username, String email, String password, List<Car> cars, List<String> groups) {
         this.id = id;
-        this.password = password;
         this.username = username;
+        this.email = email;
+        this.password = password;
+        this.cars = cars;
+        this.groups = groups;
+    }
+
+    public List<String> getGroups() {
+        return groups;
     }
 
     public List<Car> getCars() {
